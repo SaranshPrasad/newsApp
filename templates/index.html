@@ -78,16 +78,16 @@
    <body>
        
     <!-- Preloader Start -->
-<!--     <div id="preloader-active">-->
-<!--        <div class="preloader d-flex align-items-center justify-content-center">-->
-<!--            <div class="preloader-inner position-relative">-->
-<!--                <div class="preloader-circle"></div>-->
-<!--                <div class="preloader-img pere-text">-->
-<!--                    <img src="static/assets/img/logo/logo.png" alt="">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+     <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="static/assets/img/logo/navLogo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Preloader Start -->
 
     <header>
@@ -121,30 +121,28 @@
                             <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                                 <!-- sticky -->
                                     <div class="sticky-logo">
-                                        <a href="index.html"><img src="static/assets/img/logo/navLogo.png" alt=""></a>
+                                              <img src="static/assets/img/logo/navLogo.png" alt="">
                                     </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">
-                                    <nav>                  
-                                        <ul id="navigation">    
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="#">Home</a></li>
                                             <li><a href="#">Latest News</a></li>
+                                            <li><div class="col-xl-2 col-lg-2 col-md-4">
+                                    <div id="search">
+                                        <form action="/search" method="post" id="search-form">
+                                            <input type="text" placeholder="Search" name="search" id="search-space">
+                                            <button type="submit" id="search-btn" style="background:transparent;color:black;border:none;"><i class="fas fa-search special-tag"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                           </li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>             
-                            <div class="col-xl-2 col-lg-2 col-md-4">
-                                <div class="header-right-btn f-right d-none d-lg-block">
 
-                                    <div id="search">
-                                        <form action="/search" method="post" id="search-form">
-                                            <input type="text" placeholder="Search" name="search" id="search-space">
-                                            <button type="submit" id="search-btn"><i class="fas fa-search special-tag"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- Mobile Menu -->
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-md-none"></div>
@@ -268,8 +266,8 @@
                 <div class="row">
                     <div class="col-12 myCard">
                         {% for items in range(10, 100) %}
-                        <div class="card" style="width: 20rem;">
-                           <img src="{{ data[items]['urlToImage'] }}" style="height:200px;width:20rem" class="card-img-top" alt="...">
+                        <div class="card" style="width: 23rem;">
+                           <img src="{{ data[items]['urlToImage'] }}" style="height:200px;width:23rem" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><a href="{{ data[items]['url']  }}" target="_blank"
                                                               class="title-card">{{ data[items]["title"]}}</a></h5>
