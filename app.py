@@ -28,5 +28,3 @@ def home():
     send_data = data["articles"]
     return render_template("index.html", data=send_data, lenData=len_of_data, date=today, year=year)
 
-if __name__ == '__main__':
-    app.run(debug=True)
